@@ -15,22 +15,22 @@ namespace _6_StringManipulation
 
         static void Main(string[] args)
         {
-            string theString;
-            theString = getString();
+            string[] theString = new string[5];
+            theString[0] = getString();
 
+            
 
-
-            string string1 = theString.Replace(' ', '_'); // Replaced space with underscore
-            string string2 = theString.TrimStart();       // Remove spaces at start
-            string string3 = theString.TrimEnd();         // Remove spaces at the end
-            string string4 = theString.Replace('a', 'A'); // Replace lowecase a with uppercase A
+            theString[1] = theString[0].Replace(' ', '_'); // Replaced space with underscore
+            theString[2] = theString[0].TrimStart();       // Remove spaces at start
+            theString[3] = theString[0].TrimEnd();         // Remove spaces at the end
+            theString[4] = theString[0].Replace('a', 'A'); // Replace lowecase a with uppercase A
 
             Console.WriteLine();
-            Console.WriteLine(string1);
-            Console.WriteLine(string2);
-            Console.WriteLine(string3);
-            Console.WriteLine(string4);
 
+            for(int i = 0; i <= 4; i++)
+            {
+                Console.WriteLine(theString[i]);
+            }
         }
     }
 }
